@@ -14,6 +14,8 @@
 
 @property (strong, nonatomic) NSString *path;
 
+@property (strong, nonatomic) NSString * query;
+
 -(instancetype) initWithPath:(NSString*) path;
 
 @end

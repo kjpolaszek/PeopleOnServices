@@ -8,6 +8,7 @@
 
 #import "UIUserTableViewCell.h"
 
+
 @implementation UIUserTableViewCell
 
 - (void)awakeFromNib {
@@ -19,6 +20,11 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setAvatarURLString:(NSString *)urlString {
+
+    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:urlString]];
 }
 
 @end

@@ -52,9 +52,20 @@
 
 - (APIRequestTask *)getDataFor:(APIRequest *)request {
 
-    NSURL * url = [[NSURL alloc] initFileURLWithPath:request.path relativeToURL:_baseURL];
+    NSString * encodedURL = [request.path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 
-    NSURLRequest * urlRequest = [[NSURLRequest alloc]initWithURL:url];
+    NSString * scheme = _baseURL.scheme;
+    NSString * host = _baseURL.host;
+
+    NSURLComponents * components = [[NSURLComponents alloc] init];
+    components.scheme = _baseURL.scheme;
+    components.host = _baseURL.host;
+    components.path = encodedURL;
+    components.query = request.query;
+
+    NSURL * url = components.URL;
+
+    NSURLRequest * urlRequest = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:30];
 
     APIRequestTask * task = [[APIRequestTask alloc] init];
 

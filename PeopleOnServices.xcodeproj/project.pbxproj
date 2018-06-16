@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8335D752873EA4B5780D5280 /* libPods-PeopleOnServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 979C38F9E538D743B33FBBB1 /* libPods-PeopleOnServices.a */; };
+		8E4E374077CD0EB050783A83 /* libPods-PeopleOnServicesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 407EBE996C059D8AC3669E5E /* libPods-PeopleOnServicesTests.a */; };
 		F3EEE4B020D42A0E00EB5BCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4AF20D42A0E00EB5BCA /* AppDelegate.m */; };
 		F3EEE4B320D42A0E00EB5BCA /* PeopleOnServices.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4B120D42A0E00EB5BCA /* PeopleOnServices.xcdatamodeld */; };
 		F3EEE4B620D42A0E00EB5BCA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4B520D42A0E00EB5BCA /* MasterViewController.m */; };
@@ -38,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17954BAC6967DE2564DA102E /* Pods-PeopleOnServices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleOnServices.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleOnServices/Pods-PeopleOnServices.debug.xcconfig"; sourceTree = "<group>"; };
+		359947C6118E8BD8F7586EDE /* Pods-PeopleOnServicesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleOnServicesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleOnServicesTests/Pods-PeopleOnServicesTests.release.xcconfig"; sourceTree = "<group>"; };
+		407EBE996C059D8AC3669E5E /* libPods-PeopleOnServicesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PeopleOnServicesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C449B6DED7820E5D17BD4B /* Pods-PeopleOnServicesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleOnServicesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleOnServicesTests/Pods-PeopleOnServicesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		979C38F9E538D743B33FBBB1 /* libPods-PeopleOnServices.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PeopleOnServices.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F329838420D50FB500C93666 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EEE4AB20D42A0E00EB5BCA /* PeopleOnServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleOnServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EEE4AE20D42A0E00EB5BCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3EEE4AF20D42A0E00EB5BCA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,6 +79,7 @@
 		F3EEE4EF20D45F4200EB5BCA /* DailyMotionUserMapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyMotionUserMapper.m; sourceTree = "<group>"; };
 		F3EEE4F120D4F3AB00EB5BCA /* Backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Backend.h; path = PeopleOnServices/Model/Backend.h; sourceTree = SOURCE_ROOT; };
 		F3EEE4F220D4F3AB00EB5BCA /* Backend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Backend.m; path = PeopleOnServices/Model/Backend.m; sourceTree = SOURCE_ROOT; };
+		F5FE3A104A4AFFC93B2F9980 /* Pods-PeopleOnServices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleOnServices.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleOnServices/Pods-PeopleOnServices.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8335D752873EA4B5780D5280 /* libPods-PeopleOnServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,18 +95,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E4E374077CD0EB050783A83 /* libPods-PeopleOnServicesTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1F52F647DF18F8B01517730 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F329838420D50FB500C93666 /* libSDWebImage.a */,
+				979C38F9E538D743B33FBBB1 /* libPods-PeopleOnServices.a */,
+				407EBE996C059D8AC3669E5E /* libPods-PeopleOnServicesTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F3EEE4A220D42A0E00EB5BCA = {
 			isa = PBXGroup;
 			children = (
 				F3EEE4AD20D42A0E00EB5BCA /* PeopleOnServices */,
 				F3EEE4CC20D42A1000EB5BCA /* PeopleOnServicesTests */,
 				F3EEE4AC20D42A0E00EB5BCA /* Products */,
+				F877AB93C26B0F908482BA22 /* Pods */,
+				F1F52F647DF18F8B01517730 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +194,17 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		F877AB93C26B0F908482BA22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17954BAC6967DE2564DA102E /* Pods-PeopleOnServices.debug.xcconfig */,
+				F5FE3A104A4AFFC93B2F9980 /* Pods-PeopleOnServices.release.xcconfig */,
+				91C449B6DED7820E5D17BD4B /* Pods-PeopleOnServicesTests.debug.xcconfig */,
+				359947C6118E8BD8F7586EDE /* Pods-PeopleOnServicesTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3EEE4D220D42A1000EB5BCA /* Build configuration list for PBXNativeTarget "PeopleOnServices" */;
 			buildPhases = (
+				9B5F7534C2EE0B936F65461C /* [CP] Check Pods Manifest.lock */,
 				F3EEE4A720D42A0E00EB5BCA /* Sources */,
 				F3EEE4A820D42A0E00EB5BCA /* Frameworks */,
 				F3EEE4A920D42A0E00EB5BCA /* Resources */,
@@ -195,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3EEE4D520D42A1000EB5BCA /* Build configuration list for PBXNativeTarget "PeopleOnServicesTests" */;
 			buildPhases = (
+				D16B3F802D7DC5928EA5972B /* [CP] Check Pods Manifest.lock */,
 				F3EEE4C520D42A1000EB5BCA /* Sources */,
 				F3EEE4C620D42A1000EB5BCA /* Frameworks */,
 				F3EEE4C720D42A1000EB5BCA /* Resources */,
@@ -266,6 +302,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B5F7534C2EE0B936F65461C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeopleOnServices-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D16B3F802D7DC5928EA5972B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeopleOnServicesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F3EEE4A720D42A0E00EB5BCA /* Sources */ = {
@@ -377,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -429,7 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -438,11 +513,13 @@
 		};
 		F3EEE4D320D42A1000EB5BCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17954BAC6967DE2564DA102E /* Pods-PeopleOnServices.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7K6X4GEV2R;
 				INFOPLIST_FILE = PeopleOnServices/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,11 +532,13 @@
 		};
 		F3EEE4D420D42A1000EB5BCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5FE3A104A4AFFC93B2F9980 /* Pods-PeopleOnServices.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7K6X4GEV2R;
 				INFOPLIST_FILE = PeopleOnServices/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,6 +551,7 @@
 		};
 		F3EEE4D620D42A1000EB5BCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91C449B6DED7820E5D17BD4B /* Pods-PeopleOnServicesTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -491,6 +571,7 @@
 		};
 		F3EEE4D720D42A1000EB5BCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 359947C6118E8BD8F7586EDE /* Pods-PeopleOnServicesTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

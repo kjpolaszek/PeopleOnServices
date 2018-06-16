@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface UIUserTableViewCell : UITableViewCell
 
@@ -14,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *userNameLbl;
 @property (weak, nonatomic) IBOutlet UILabel *apiLbl;
 
-
+-(void) setAvatarURLString:(NSString*) urlString;
 
 @end

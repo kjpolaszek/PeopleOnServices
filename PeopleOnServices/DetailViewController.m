@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface DetailViewController ()
 
@@ -17,7 +18,9 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = self.detailItem.timestamp.description;
+        self.userNameLbl.text = self.detailItem.userName;
+        self.apiLbl.text = self.detailItem.apiSource;
+        [self.avatarViewImage sd_setImageWithURL:[NSURL URLWithString:self.detailItem.imageURL]];
     }
 }
 

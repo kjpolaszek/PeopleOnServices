@@ -12,7 +12,9 @@
 @interface DetailViewController : UIViewController
 
 @property (strong, nonatomic) User *detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarViewImage;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLbl;
+@property (weak, nonatomic) IBOutlet UILabel *apiLbl;
 
 @end
 

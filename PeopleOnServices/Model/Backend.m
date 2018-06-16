@@ -28,7 +28,7 @@
 }
 
 - (void)getUsersFromGitHub {
-    APIRequest * request = [[APIRequest alloc] initWithPath:@"users"];
+    APIRequest * request = [[APIRequest alloc] initWithPath:@"/users"];
 
     [[gitHubApi getDataFor:request] completeWithBlock:^(NSData *data, NSError *error) {
         if (error != NULL) {
@@ -37,35 +37,59 @@
         NSError * jsonError;
         NSJSONSerialization * json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&jsonError];
 
-        NSManagedObjectContext * context = [self->_persistentContainer newBackgroundContext];
+        dispatch_async(dispatch_get_main_queue(), ^{
 
-        if ([json isKindOfClass: [NSArray class]]) {
-            NSArray * usersArray = (NSArray*)json;
-            for (NSDictionary * usersDic in usersArray) {
-                User * user = [[User alloc] initWithContext:context];
-                user.uid = [[usersDic objectForKey:@"id"] stringValue];
-                user.userName = [usersDic objectForKey:@"login"];
-                user.apiSource = [self->gitHubApi.baseURL absoluteString];
-                user.imageURL = [usersDic objectForKey:@"avatar_url"];
+            NSManagedObjectContext * context = [self->_persistentContainer viewContext];
+
+            if ([json isKindOfClass: [NSArray class]]) {
+                NSArray * usersArray = (NSArray*)json;
+                for (NSDictionary * usersDic in usersArray) {
+
+                    NSString * uid = [[usersDic objectForKey:@"id"] stringValue];
+
+                    User * user = [self getUserById:uid context:context];
+
+                    user.uid = uid;
+                    user.userName = [usersDic objectForKey:@"login"];
+                    user.apiSource = [self->gitHubApi.baseURL absoluteString];
+                    user.imageURL = [usersDic objectForKey:@"avatar_url"];
+                }
             }
-        }
 
-        NSError *coreDataError = nil;
-        if ([context hasChanges] && ![context save:&coreDataError]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, error.userInfo);
-            //abort();
-        }
+            NSError *coreDataError = nil;
+            if ([context hasChanges] && ![context save:&coreDataError]) {
+                // Replace this implementation with code to handle the error appropriately.
+                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+                //abort();
+            }
+        });
 
     }];
 }
 
+- (User* _Nullable) getUserById:(NSString*) uid context:(NSManagedObjectContext*) context {
 
+    NSFetchRequest<User*> * fetch = [NSFetchRequest fetchRequestWithEntityName:@"User"];
+    fetch.predicate = [NSPredicate predicateWithFormat:@"uid = %@",uid];
+    NSError* error;
+
+    NSArray<User*> * users = [context executeFetchRequest:fetch error:&error];
+
+    if (users.count > 0) {
+        return [users firstObject];
+    }
+
+    User * user = [[User alloc] initWithContext:context];
+    user.uid = uid;
+
+    return user;
+}
 
 - (void)getUsersFromDailyMotion {
-    APIRequest * request = [[APIRequest alloc] initWithPath:@"users?fields=avatar_360_url,username"];
-
+    APIRequest * request = [[APIRequest alloc] initWithPath:@"/users"];
+    request.query = @"fields=avatar_360_url,username,id";
+    
     [[dailyMotionApi getDataFor:request] completeWithBlock:^(NSData *data, NSError *error) {
 
         if (error != NULL) {
@@ -74,6 +98,37 @@
         NSError * jsonError;
         NSJSONSerialization * json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&jsonError];
         NSLog(@"dailyMotion data: %@",json.description);
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+
+            NSManagedObjectContext * context = [self->_persistentContainer viewContext];
+            if ([json isKindOfClass: [NSDictionary class]]) {
+                NSArray * usersArray = [(NSDictionary*)json objectForKey:@"list"];
+                for (NSDictionary * usersDic in usersArray) {
+
+                    NSString * uid = [usersDic objectForKey:@"id"];
+
+                    User * user = [self getUserById:uid context:context];
+
+                    user.userName = [usersDic objectForKey:@"username"];
+                    user.apiSource = [self->dailyMotionApi.baseURL absoluteString];
+                    user.imageURL = [usersDic objectForKey:@"avatar_360_url"];
+
+                }
+            }
+
+            NSError *coreDataError = nil;
+            if ([context hasChanges] && ![context save:&coreDataError]) {
+                // Replace this implementation with code to handle the error appropriately.
+                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+                //abort();
+            }
+
+        });
+
+
+
 
     }];
 

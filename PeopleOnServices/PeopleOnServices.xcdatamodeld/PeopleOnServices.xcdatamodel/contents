@@ -6,7 +6,7 @@
         <attribute name="timestamp" optional="YES" attributeType="Date">
             <userInfo/>
         </attribute>
-        <attribute name="uid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uid" attributeType="String" syncable="YES"/>
         <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
         <userInfo/>
     </entity>
