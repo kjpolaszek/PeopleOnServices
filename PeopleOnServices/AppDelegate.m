@@ -23,9 +23,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     backend = [[Backend alloc] init];
 
-    [backend getUsersFromDailyMotion];
-    [backend getUsersFromGitHub];
-
     // Override point for customization after application launch.
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];

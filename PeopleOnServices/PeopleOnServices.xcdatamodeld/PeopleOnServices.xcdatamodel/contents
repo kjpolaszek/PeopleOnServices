@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="User" representedClassName="User" codeGenerationType="class">
+    <entity name="UserEntity" representedClassName="UserEntity" codeGenerationType="class">
         <attribute name="apiSource" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="timestamp" optional="YES" attributeType="Date">
-            <userInfo/>
-        </attribute>
         <attribute name="uid" attributeType="String" syncable="YES"/>
         <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
         <userInfo/>
     </entity>
     <elements>
-        <element name="User" positionX="261" positionY="189" width="128" height="120"/>
+        <element name="UserEntity" positionX="261" positionY="189" width="128" height="105"/>
     </elements>
 </model>

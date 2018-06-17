@@ -3,6 +3,8 @@
 
 target 'PeopleOnServices' do
     pod 'SDWebImage'
+    pod 'Masonry'
+    pod 'MBProgressHUD'
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 

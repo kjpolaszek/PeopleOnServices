@@ -17,7 +17,7 @@
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
-@property (strong, nonatomic) NSFetchedResultsController<User *> *fetchedResultsController;
+@property (strong, nonatomic) NSFetchedResultsController<UserEntity *> *fetchedResultsController;
 
 @property (strong, nonatomic) Backend * backend;
 

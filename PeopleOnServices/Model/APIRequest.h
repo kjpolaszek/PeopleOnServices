@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "Mapper.h"
 
 @interface APIRequest : NSObject
 

@@ -12,8 +12,6 @@
 #import "APIService.h"
 @import CoreData;
 
-
-
 @protocol BackendDelegate
 -(void) fetchingDataDidStart;
 -(void) fechingDataDidComplete;
@@ -26,10 +24,9 @@
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
 
-- (void) getUsersFromDailyMotion;
-- (void) getUsersFromGitHub;
+- (void) updateUsers:(void (^)(void))updateComplete;
 
-
-- (void)saveContext;
+- (void) removeAllObjectsByEntityName:(NSString*) name;
+- (void) saveContext;
 
 @end

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8335D752873EA4B5780D5280 /* libPods-PeopleOnServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 979C38F9E538D743B33FBBB1 /* libPods-PeopleOnServices.a */; };
 		8E4E374077CD0EB050783A83 /* libPods-PeopleOnServicesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 407EBE996C059D8AC3669E5E /* libPods-PeopleOnServicesTests.a */; };
+		F329838D20D6681500C93666 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F329838B20D6681500C93666 /* User.m */; };
+		F329838E20D691EB00C93666 /* DailyMotionService.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4E920D4597400EB5BCA /* DailyMotionService.m */; };
+		F329838F20D6921B00C93666 /* GitHubService.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4E620D4595200EB5BCA /* GitHubService.m */; };
 		F3EEE4B020D42A0E00EB5BCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4AF20D42A0E00EB5BCA /* AppDelegate.m */; };
 		F3EEE4B320D42A0E00EB5BCA /* PeopleOnServices.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4B120D42A0E00EB5BCA /* PeopleOnServices.xcdatamodeld */; };
 		F3EEE4B620D42A0E00EB5BCA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4B520D42A0E00EB5BCA /* MasterViewController.m */; };
@@ -22,10 +25,6 @@
 		F3EEE4DF20D43E6600EB5BCA /* UIUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4DD20D43E6600EB5BCA /* UIUserTableViewCell.m */; };
 		F3EEE4E020D43E6600EB5BCA /* UIUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3EEE4DE20D43E6600EB5BCA /* UIUserTableViewCell.xib */; };
 		F3EEE4E420D4590100EB5BCA /* APIService.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4E320D4590100EB5BCA /* APIService.m */; };
-		F3EEE4E720D4595200EB5BCA /* GitHubService.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4E620D4595200EB5BCA /* GitHubService.m */; };
-		F3EEE4EA20D4597400EB5BCA /* DailyMotionService.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4E920D4597400EB5BCA /* DailyMotionService.m */; };
-		F3EEE4ED20D45E4800EB5BCA /* Mapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4EC20D45E4800EB5BCA /* Mapper.m */; };
-		F3EEE4F020D45F4200EB5BCA /* DailyMotionUserMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4EF20D45F4200EB5BCA /* DailyMotionUserMapper.m */; };
 		F3EEE4F320D4F3AB00EB5BCA /* Backend.m in Sources */ = {isa = PBXBuildFile; fileRef = F3EEE4F220D4F3AB00EB5BCA /* Backend.m */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +45,8 @@
 		91C449B6DED7820E5D17BD4B /* Pods-PeopleOnServicesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleOnServicesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleOnServicesTests/Pods-PeopleOnServicesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		979C38F9E538D743B33FBBB1 /* libPods-PeopleOnServices.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PeopleOnServices.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F329838420D50FB500C93666 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F329838B20D6681500C93666 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		F329838C20D6681500C93666 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		F3EEE4AB20D42A0E00EB5BCA /* PeopleOnServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleOnServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EEE4AE20D42A0E00EB5BCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3EEE4AF20D42A0E00EB5BCA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,10 +74,6 @@
 		F3EEE4E620D4595200EB5BCA /* GitHubService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHubService.m; sourceTree = "<group>"; };
 		F3EEE4E820D4597400EB5BCA /* DailyMotionService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyMotionService.h; sourceTree = "<group>"; };
 		F3EEE4E920D4597400EB5BCA /* DailyMotionService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyMotionService.m; sourceTree = "<group>"; };
-		F3EEE4EB20D45E4800EB5BCA /* Mapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mapper.h; sourceTree = "<group>"; };
-		F3EEE4EC20D45E4800EB5BCA /* Mapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mapper.m; sourceTree = "<group>"; };
-		F3EEE4EE20D45F4200EB5BCA /* DailyMotionUserMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyMotionUserMapper.h; sourceTree = "<group>"; };
-		F3EEE4EF20D45F4200EB5BCA /* DailyMotionUserMapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyMotionUserMapper.m; sourceTree = "<group>"; };
 		F3EEE4F120D4F3AB00EB5BCA /* Backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Backend.h; path = PeopleOnServices/Model/Backend.h; sourceTree = SOURCE_ROOT; };
 		F3EEE4F220D4F3AB00EB5BCA /* Backend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Backend.m; path = PeopleOnServices/Model/Backend.m; sourceTree = SOURCE_ROOT; };
 		F5FE3A104A4AFFC93B2F9980 /* Pods-PeopleOnServices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleOnServices.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleOnServices/Pods-PeopleOnServices.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +107,15 @@
 				407EBE996C059D8AC3669E5E /* libPods-PeopleOnServicesTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F329838A20D6681500C93666 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				F329838B20D6681500C93666 /* User.m */,
+				F329838C20D6681500C93666 /* User.h */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		F3EEE4A220D42A0E00EB5BCA = {
@@ -177,16 +183,13 @@
 		F3EEE4E120D44DB000EB5BCA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F329838A20D6681500C93666 /* Objects */,
 				F3EEE4E220D4590100EB5BCA /* APIService.h */,
 				F3EEE4E320D4590100EB5BCA /* APIService.m */,
 				F3EEE4E520D4595200EB5BCA /* GitHubService.h */,
 				F3EEE4E620D4595200EB5BCA /* GitHubService.m */,
 				F3EEE4E820D4597400EB5BCA /* DailyMotionService.h */,
 				F3EEE4E920D4597400EB5BCA /* DailyMotionService.m */,
-				F3EEE4EB20D45E4800EB5BCA /* Mapper.h */,
-				F3EEE4EC20D45E4800EB5BCA /* Mapper.m */,
-				F3EEE4EE20D45F4200EB5BCA /* DailyMotionUserMapper.h */,
-				F3EEE4EF20D45F4200EB5BCA /* DailyMotionUserMapper.m */,
 				F3EEE4F120D4F3AB00EB5BCA /* Backend.h */,
 				F3EEE4F220D4F3AB00EB5BCA /* Backend.m */,
 			);
@@ -350,15 +353,14 @@
 				F3EEE4DA20D437D800EB5BCA /* APIRequest.m in Sources */,
 				F3EEE4C420D42A1000EB5BCA /* main.m in Sources */,
 				F3EEE4E420D4590100EB5BCA /* APIService.m in Sources */,
-				F3EEE4EA20D4597400EB5BCA /* DailyMotionService.m in Sources */,
 				F3EEE4B020D42A0E00EB5BCA /* AppDelegate.m in Sources */,
+				F329838E20D691EB00C93666 /* DailyMotionService.m in Sources */,
+				F329838D20D6681500C93666 /* User.m in Sources */,
 				F3EEE4F320D4F3AB00EB5BCA /* Backend.m in Sources */,
 				F3EEE4B620D42A0E00EB5BCA /* MasterViewController.m in Sources */,
 				F3EEE4B320D42A0E00EB5BCA /* PeopleOnServices.xcdatamodeld in Sources */,
-				F3EEE4F020D45F4200EB5BCA /* DailyMotionUserMapper.m in Sources */,
 				F3EEE4B920D42A0E00EB5BCA /* DetailViewController.m in Sources */,
-				F3EEE4E720D4595200EB5BCA /* GitHubService.m in Sources */,
-				F3EEE4ED20D45E4800EB5BCA /* Mapper.m in Sources */,
+				F329838F20D6921B00C93666 /* GitHubService.m in Sources */,
 				F3EEE4DF20D43E6600EB5BCA /* UIUserTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

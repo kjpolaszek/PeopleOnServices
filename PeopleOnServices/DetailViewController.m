@@ -40,7 +40,7 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(User *)newDetailItem {
+- (void)setDetailItem:(UserEntity *)newDetailItem {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
         
