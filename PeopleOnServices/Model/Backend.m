@@ -40,8 +40,9 @@
             NSMutableArray<User *> *users = [NSMutableArray new];
             [users addObjectsFromArray:dailyMotionUsers];
             [users addObjectsFromArray:gitHubUsers];
-            [self saveUsers:users];
-            updateComplete();
+            [self saveUsers:users complete:^{
+                updateComplete();
+            }];
         }
     };
 
@@ -83,7 +84,7 @@
 
 }
 
-- (void) saveUsers:(NSArray<User*>*) users; {
+- (void) saveUsers:(NSArray<User*>*) users complete:(void (^)(void)) completeBlock; {
     [self->_persistentContainer performBackgroundTask:^(NSManagedObjectContext * _Nonnull context) {
         for (User* user in users) {
             [self updateDataBaseBy:user context:context];
@@ -96,6 +97,8 @@
             NSLog(@"Unresolved error %@, %@", coreDataError, coreDataError.userInfo);
             //abort();
         }
+        completeBlock();
+
     }];
 }
 
